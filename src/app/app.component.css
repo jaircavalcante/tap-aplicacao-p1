@@ -1,0 +1,11 @@
+body{
+    background-color: white !important;
+}
+
+.navbar-default {
+    background-color: #038484;
+    border-color: #038484;
+    color: white;
+    font-size: 25px;
+}
+

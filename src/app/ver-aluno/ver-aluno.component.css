@@ -1,0 +1,17 @@
+h4 {
+    border-bottom: 1px solid white;
+    color: #f5f7f7;
+    padding: 1%;
+}
+
+thead {
+    color: white;
+    background-color: #044848;
+}
+
+tbody{
+    border-bottom: 2px solid lightgray;
+    background-color: #136b6b;
+    color: #f7f1f1;
+    font-weight: 70
+}

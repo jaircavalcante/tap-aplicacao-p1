@@ -1,0 +1,78 @@
+<app-home></app-home>
+<div class="row">
+
+    <div class="alert success col-sm-15" *ngIf="sucesso">
+        <span class="closebtn" (click)="removerMensagemAlerta('sucesso')">&times;</span>
+        <strong>Sucesso!</strong> {{mensagemAlerta}}
+    </div>
+
+    <div class="alert info" *ngIf="error" style="background-color: red !important">
+        <span class="closebtn" (click)="removerMensagemAlerta('error')">&times;</span>
+        <strong>Error!</strong> {{mensagemAlerta}}
+    </div>
+
+  <div class="col-sm-5" id="preencherAluno">
+    <h4>Preencher Dados do Aluno</h4>
+  </div>
+</div>
+<div class="">
+  <div class="">
+    <form #alunoForm="ngForm" (ngSubmit)="alunoForm.valid  &&  salvar() && alunoForm.reset()">
+
+      <div class="form-group">
+        <label for="nome" class="texto-titulo">Nome:</label> <br>
+        <input type="text" name="nome" class="login_box" id="nome" required [(ngModel)]="model.nome" #nome="ngModel" autofocus>
+      </div>
+
+      <div [hidden]="nome.valid || nome.pristine" class="alert alert-danger">
+        O nome é obrigatório
+      </div>
+
+      <div class="form-group">
+        <label for="curso" class="texto-titulo">Curso:</label>  <br>
+        <select class="form-control" name="curso" class="login_box" id="curso" required [(ngModel)]="model.curso" #curso="ngModel">
+          <option value="">Selecione</option>
+          <option value="Sistema de Informaçao">Sistema de Informação</option>
+          <option value="Jogos Digitais">Jogos Digitais</option>
+        </select>
+      </div>
+      
+      <div [hidden]="curso.valid || curso.pristine" class="alert alert-danger">
+        O Curso é obrigatório
+      </div>
+      
+      <div class="form-group">
+        <label for="periodo" class="texto-titulo">Periodo:</label> <br>
+        <input type="number" name="periodo" class="login_box" id="periodo" required [(ngModel)]="model.periodo" #periodo="ngModel">
+      </div>
+
+      <div [hidden]="periodo.valid || periodo.pristine" class="alert alert-danger">
+        O periodo é obrigatório
+      </div>
+
+      <div class="form-group">
+        <label for="matricula" class="texto-titulo">Matricula:</label> <br>
+        <input type="text" name="matricula" maxlength="9" class="login_box" id="matricula" required [(ngModel)]="model.matricula" #matricula="ngModel">
+      </div>
+
+      <div [hidden]="matricula.valid || matricula.pristine" class="alert alert-danger">
+        O matricula é obrigatório
+      </div>
+
+      <div class="form-group">
+          <label for="situacao" class="texto-titulo">Situação:</label> <br>
+          <select class="form-control" name="situacao" class="login_box" id="situacao" required [(ngModel)]="model.situacao" #situacao="ngModel">
+            <option value="">Selecione</option>
+            <option value="Matriculado">Matriculado</option>
+            <option value="Trancado">Trancado</option>
+          </select>
+        </div>
+
+      <div [hidden]="situacao.valid || situacao.pristine" class="alert alert-danger">
+        O situacao é obrigatório
+      </div>
+
+      <button type="submit" class="btn btn-success">Salvar</button>
+    </form>
+  </div>
+</div>

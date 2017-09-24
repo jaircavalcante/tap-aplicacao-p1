@@ -1,0 +1,31 @@
+<app-home></app-home>
+<div class="row">
+</div>
+<div class="">
+  <div class="col-sm-15">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Curso</th>
+          <th>Matricula</th>
+          <th>Periodo</th>
+          <th>Situação</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let aluno of listaAlunos">
+        <tr>
+          <td>{{aluno.nome}}</td>
+          <td>{{aluno.curso}}</td>
+          <td>{{aluno.matricula}}</td>
+          <td>{{aluno.periodo}}</td>
+          <td>{{aluno.situacao}}</td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <app-pdf></app-pdf>
+
+  </div>
+</div>

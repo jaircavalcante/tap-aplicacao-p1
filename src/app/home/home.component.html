@@ -1,0 +1,12 @@
+<div class="menu">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+        <li><a routerLink="/alunos" *ngIf="this.usuarioAutenticado == 'ADMIN'">Alunos</a></li>
+        <li><a routerLink="/verAlunos" >Visualizar Alunos</a></li>
+        <li><a (click)="sair()" style="cursor: pointer">Sair</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<router-outlet></router-outlet>
