@@ -20,11 +20,9 @@
       "prefix": "app",
       "styles": [
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "styles.css",
-        "../node_modules/sweetalert2/dist/sweetalert2.css"
+        "styles.css"
       ],
       "scripts": [
-        "../node_modules/sweetalert2/dist/sweetalert2.js",
         "../node_modules/jspdf/dist/jspdf.min.js",
         "../node_modules/jspdf-autotable/dist/jspdf.plugin.autotable.js"
       ],
